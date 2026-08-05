@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Terminal com erro pouco claro</title>
+  <desc id="desc">Representacao de uma CLI exibindo comando digitado e mensagem de erro sem orientacao suficiente.</desc>
+  <rect width="800" height="520" fill="#f8fafc"/>
+  <rect x="70" y="70" width="660" height="380" rx="14" fill="#111827"/>
+  <rect x="70" y="70" width="660" height="48" fill="#374151"/>
+  <circle cx="105" cy="94" r="8" fill="#ef4444"/>
+  <circle cx="132" cy="94" r="8" fill="#facc15"/>
+  <circle cx="159" cy="94" r="8" fill="#22c55e"/>
+  <text x="100" y="170" font-family="Consolas, monospace" font-size="28" fill="#bbf7d0">$ deploy --force</text>
+  <text x="100" y="225" font-family="Consolas, monospace" font-size="28" fill="#fecaca">Erro: parametro invalido</text>
+  <text x="100" y="280" font-family="Consolas, monospace" font-size="25" fill="#fef3c7">Sem exemplo, sem sugestao, sem ajuda.</text>
+  <path d="M610 330l35 70h-70z" fill="#facc15" stroke="#854d0e" stroke-width="6"/>
+  <text x="626" y="383" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#854d0e">!</text>
+</svg>
