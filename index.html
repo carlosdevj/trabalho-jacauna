@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
@@ -39,12 +39,12 @@
       </button>
 
       <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
-        <a href="#gui">GUI</a>
         <a href="#cli">CLI</a>
         <a href="#menu">Menu</a>
+        <a href="#formulario">Formulário</a>
+        <a href="#gui">GUI</a>
         <a href="#touch">Touch</a>
         <a href="#vui">VUI</a>
-        <a href="#formulario">Formulário</a>
         <a href="#nlui">NLUI</a>
         <a href="#requisitos">Requisitos</a>
         <a href="#referencias">Referências</a>
@@ -53,6 +53,11 @@
   </header>
 
   <aside class="accessibility-toolbar" aria-label="Ferramentas de acessibilidade">
+    <button type="button" id="accessibility-toggle" class="accessibility-toggle"
+            aria-expanded="true" aria-controls="accessibility-tools">
+      Acessibilidade
+    </button>
+    <div class="accessibility-tools" id="accessibility-tools">
     <button type="button" id="font-decrease" aria-label="Diminuir tamanho do texto">A−</button>
     <button type="button" id="font-reset" aria-label="Restaurar tamanho padrão do texto">A</button>
     <button type="button" id="font-increase" aria-label="Aumentar tamanho do texto">A+</button>
@@ -64,6 +69,7 @@
       <span aria-hidden="true">▣</span>
       <span>Apresentação</span>
     </button>
+    </div>
   </aside>
 
   <main id="conteudo">
@@ -87,7 +93,7 @@
           </div>
           <div>
             <dt>Professor(a)</dt>
-            <dd>[Substituir pelo nome do professor]</dd>
+            <dd>Ricardo Jacauna</dd>
           </div>
           <div>
             <dt>Turma</dt>
@@ -101,7 +107,7 @@
                alt="Imagem provisória com três silhuetas representando os integrantes do trio. Substituir pela fotografia real antes da entrega."
                width="960" height="540">
           <figcaption>
-            Integrantes: Eric Freitas Sampaio · [Integrante 2] · [Integrante 3].
+            Integrantes: Eric Freitas Sampaio · Carlos Gabriel de Morais Leal · Larissa dos Passos Costa Ferreira.
             <strong>Substituir esta ilustração pela foto real do trio antes da entrega.</strong>
           </figcaption>
         </figure>
@@ -118,8 +124,8 @@
         <div class="two-columns">
           <article>
             <h3>Objetivo</h3>
-            <p>Apresentar oito formas e dimensões de interação entre pessoas e sistemas computacionais.</p>
-            <p>O foco está em funcionamento, aplicações, vantagens, limitações e acessibilidade.</p>
+            <p>Apresentar formas de interação entre pessoas e sistemas computacionais, partindo das interfaces mais textuais até as mais naturais.</p>
+            <p>Algumas categorias podem se sobrepor: um menu visual, por exemplo, também pode fazer parte de uma GUI.</p>
           </article>
 
           <article>
@@ -129,17 +135,13 @@
           </article>
         </div>
 
-        <div class="notice" role="note">
-          <strong>Nota sobre o enunciado:</strong>
-          embora ele mencione sete tópicos, a lista apresenta oito. Por isso, todos os itens de 3 a 10 foram incluídos.
-        </div>
       </div>
     </section>
 
     <section class="topic slide-section" id="gui" aria-labelledby="titulo-gui">
       <div class="section-shell">
         <header class="topic-header">
-          <p class="section-number">03</p>
+          <p class="section-number">06</p>
           <div>
             <p class="topic-tag">Interface visual</p>
             <h2 id="titulo-gui">Interface Gráfica do Usuário — GUI</h2>
@@ -164,13 +166,15 @@
 
             <article>
               <h3>Evidências recentes</h3>
-              <p>O redesenho comunitário do GRASS GIS demonstrou que participação dos usuários, testes e terminologia clara podem melhorar adoção e eficiência.</p>
+              <p>O estudo do GRASS GIS analisou um redesenho comunitário de GUI em software geoespacial livre, com participação de usuários e desenvolvedores.</p>
+              <p>O resultado mostra uma vantagem: quando a GUI usa linguagem clara e é testada com usuários reais, ela reduz atrito em sistemas técnicos complexos.</p>
               <p class="citation">Fonte científica: Karlovska et al. (2023) <a href="#ref-1" aria-label="Ir para a referência 1">[1]</a>.</p>
             </article>
 
             <article>
               <h3>Exemplos</h3>
-              <p>Sistemas Windows, Android, caixas eletrônicos, editores de imagem, navegadores e painéis administrativos.</p>
+              <p>Esta própria página, sistemas Windows, Android, navegadores, editores de imagem e painéis administrativos.</p>
+              <p>Também aparecem em sistemas corporativos densos, como ERPs antigos, telas contábeis e cadastros com muitos campos simultâneos.</p>
             </article>
           </div>
 
@@ -187,7 +191,7 @@
     <section class="topic slide-section" id="cli" aria-labelledby="titulo-cli">
       <div class="section-shell">
         <header class="topic-header">
-          <p class="section-number">04</p>
+          <p class="section-number">03</p>
           <div>
             <p class="topic-tag">Interface textual</p>
             <h2 id="titulo-cli">Interface de Linha de Comando — CLI</h2>
@@ -212,7 +216,8 @@
 
             <article>
               <h3>Evidências recentes</h3>
-              <p>Um estudo de ferramentas de análise estática encontrou problemas recorrentes de mensagens, documentação e orientação ao usuário em interfaces usadas por desenvolvedores.</p>
+              <p>O estudo avaliou ferramentas de análise estática usadas por desenvolvedores e identificou problemas de mensagens, documentação e orientação.</p>
+              <p>Isso mostra uma limitação da CLI: ela é eficiente para especialistas, mas depende de comandos compreensíveis, ajuda clara e retorno útil quando algo falha.</p>
               <p class="citation">Fonte científica: Nachtigall, Schlichtig e Bodden (2022) <a href="#ref-2" aria-label="Ir para a referência 2">[2]</a>.</p>
             </article>
 
@@ -235,7 +240,7 @@
     <section class="topic slide-section" id="menu" aria-labelledby="titulo-menu">
       <div class="section-shell">
         <header class="topic-header">
-          <p class="section-number">05</p>
+          <p class="section-number">04</p>
           <div>
             <p class="topic-tag">Escolha estruturada</p>
             <h2 id="titulo-menu">Interface de Usuário Orientada por Menu</h2>
@@ -250,6 +255,7 @@
               <h3>Como funciona</h3>
               <p>As ações são agrupadas em listas, categorias ou níveis hierárquicos, reduzindo a necessidade de memorizar comandos.</p>
               <p>A navegação pode ocorrer por teclado, toque, controle remoto, voz ou leitor de tela.</p>
+              <p>Quando aparece em telas visuais, o menu pode ser parte de uma GUI; em terminais e centrais telefônicas, funciona como padrão próprio.</p>
             </article>
 
             <article>
@@ -260,7 +266,8 @@
 
             <article>
               <h3>Evidências recentes</h3>
-              <p>Pesquisas com usuários cegos mostram que posição, memória, gesto e feedback do leitor de tela influenciam o desempenho na seleção de menus por toque.</p>
+              <p>O estudo modelou a seleção de menus por toque feita por usuários cegos e mostrou que posição, memória, gestos e feedback influenciam o desempenho.</p>
+              <p>A evidência aponta um problema: menus não são acessíveis apenas por terem opções; eles precisam de estrutura previsível e retorno claro para leitores de tela.</p>
               <p class="citation">Fonte científica: Li et al. (2023) <a href="#ref-3" aria-label="Ir para a referência 3">[3]</a>.</p>
             </article>
 
@@ -283,7 +290,7 @@
     <section class="topic slide-section" id="touch" aria-labelledby="titulo-touch">
       <div class="section-shell">
         <header class="topic-header">
-          <p class="section-number">06</p>
+          <p class="section-number">07</p>
           <div>
             <p class="topic-tag">Interação direta</p>
             <h2 id="titulo-touch">Interface de Toque do Usuário — Touch UI</h2>
@@ -308,7 +315,8 @@
 
             <article>
               <h3>Evidências recentes</h3>
-              <p>O protótipo Toucha11y mostrou que tecnologias auxiliares podem permitir que pessoas cegas operem quiosques originalmente inacessíveis.</p>
+              <p>O protótipo Toucha11y permitiu que pessoas cegas operassem quiosques touchscreen originalmente inacessíveis por meio de um dispositivo auxiliar e aplicativo.</p>
+              <p>Isso evidencia uma limitação da Touch UI: a interação direta favorece quem enxerga a tela, mas pode excluir usuários quando não há alternativa acessível.</p>
               <p class="citation">Fonte científica: Li et al. (2023) <a href="#ref-4" aria-label="Ir para a referência 4">[4]</a>.</p>
             </article>
 
@@ -331,7 +339,7 @@
     <section class="topic slide-section" id="vui" aria-labelledby="titulo-vui">
       <div class="section-shell">
         <header class="topic-header">
-          <p class="section-number">07</p>
+          <p class="section-number">08</p>
           <div>
             <p class="topic-tag">Interação falada</p>
             <h2 id="titulo-vui">Interface de Voz do Usuário — VUI</h2>
@@ -356,7 +364,8 @@
 
             <article>
               <h3>Evidências recentes</h3>
-              <p>Uma revisão sistemática organizou estudos de VUI em avaliação de usabilidade, personalização, ética, diferenças culturais e desafios tecnológicos.</p>
+              <p>A revisão sistemática analisou 125 estudos sobre experiência do usuário em VUI e organizou desafios como avaliação, personalização, privacidade e diferenças culturais.</p>
+              <p>O resultado é duplo: voz traz vantagem em interação sem as mãos, mas ainda sofre com reconhecimento, contexto, privacidade e falta de métricas padronizadas.</p>
               <p class="citation">Fonte científica: Deshmukh e Chalmeta (2024) <a href="#ref-5" aria-label="Ir para a referência 5">[5]</a>.</p>
             </article>
 
@@ -379,7 +388,7 @@
     <section class="topic slide-section" id="formulario" aria-labelledby="titulo-formulario">
       <div class="section-shell">
         <header class="topic-header">
-          <p class="section-number">08</p>
+          <p class="section-number">05</p>
           <div>
             <p class="topic-tag">Entrada estruturada</p>
             <h2 id="titulo-formulario">Interface de Usuário Baseada em Formulário</h2>
@@ -404,7 +413,8 @@
 
             <article>
               <h3>Evidências recentes</h3>
-              <p>Um estudo participativo propôs um formulário universal para registrar barreiras de acessibilidade com informações úteis à solução do problema.</p>
+              <p>O estudo participativo reuniu usuários com deficiência visual, especialistas e literatura para propor um formulário universal de feedback de acessibilidade.</p>
+              <p>O resultado mostra uma vantagem dos formulários bem projetados: eles padronizam dados úteis sem impedir que a pessoa descreva a barreira vivida.</p>
               <p class="citation">Fonte científica: Wegener et al. (2024) <a href="#ref-6" aria-label="Ir para a referência 6">[6]</a>.</p>
             </article>
 
@@ -452,7 +462,8 @@
 
             <article>
               <h3>Evidências recentes</h3>
-              <p>Diretrizes centradas no usuário indicam que clareza, reparo de falhas, estilo de linguagem e transparência melhoram conversas com chatbots.</p>
+              <p>O estudo revisou práticas de design conversacional e avaliou diretrizes para linguagem, reparo de falhas, transparência e controle do usuário.</p>
+              <p>A evidência mostra uma recomendação: NLUI precisa assumir que ambiguidades acontecem e oferecer caminhos claros para corrigir respostas ou intenções.</p>
               <p class="citation">Fonte científica: Silva e Canedo (2023) <a href="#ref-7" aria-label="Ir para a referência 7">[7]</a>.</p>
             </article>
 
@@ -500,7 +511,8 @@
 
             <article>
               <h3>Evidências recentes</h3>
-              <p>Uma revisão de 34 estudos concluiu que requisitos de acessibilidade aparecem principalmente nas fases de levantamento e testes, com participação dos usuários.</p>
+              <p>A revisão sistemática analisou como requisitos de acessibilidade entram no desenvolvimento de sistemas de informação.</p>
+              <p>O problema encontrado é que a acessibilidade costuma aparecer mais no levantamento e nos testes; o ideal é acompanhá-la durante todo o ciclo do projeto.</p>
               <p class="citation">Fonte científica: Teixeira, Eusébio e Teixeira (2024) <a href="#ref-8" aria-label="Ir para a referência 8">[8]</a>.</p>
             </article>
 
@@ -532,8 +544,8 @@
               <li>HTML5 semântico e link para pular ao conteúdo.</li>
               <li>Textos alternativos e créditos em todas as figuras.</li>
               <li>Navegação por teclado e foco visível.</li>
-              <li>Fonte-base de 24 px e contraste mínimo de 4,5:1.</li>
-              <li>Conteúdo compreensível sem depender somente de cores.</li>
+              <li>Fonte convencional com controles para ampliar, reduzir e restaurar o tamanho do texto.</li>
+              <li>Conteúdo compreensível sem depender somente de cores e com barra de acessibilidade recolhível.</li>
             </ul>
           </article>
 
@@ -542,9 +554,9 @@
             <ul>
               <li>Conteúdo completo para adequação funcional.</li>
               <li>Arquivos leves e imagens vetoriais para desempenho.</li>
-              <li>Layout responsivo para compatibilidade.</li>
+              <li>Layout responsivo e ordem de apresentação progressiva para compatibilidade e compreensão.</li>
               <li>CSS e JavaScript separados para manutenibilidade.</li>
-              <li>Controles simples e previsíveis para usabilidade.</li>
+              <li>Controles simples e exemplos práticos para usabilidade.</li>
             </ul>
           </article>
         </div>
@@ -569,7 +581,7 @@
             Nachtigall, M., Schlichtig, M., &amp; Bodden, E. (2022).
             <em>A large-scale study of usability criteria addressed by static analysis tools</em>.
             Proceedings of the 31st ACM SIGSOFT International Symposium on Software Testing and Analysis, 532–543.
-            <a href="https://doi.org/10.1145/3533767" target="_blank" rel="noopener noreferrer">Acessar DOI<span class="sr-only"> da referência 2</span></a>.
+            <a href="https://doi.org/10.1145/3533767.3534374" target="_blank" rel="noopener noreferrer">Acessar DOI<span class="sr-only"> da referência 2</span></a>.
           </li>
 
           <li id="ref-3">
@@ -641,7 +653,7 @@
     </section>
   </main>
 
-  <div class="presentation-controls" id="presentation-controls" hidden aria-label="Controles do modo de apresentação">
+  <div class="presentation-controls" id="presentation-controls" hidden role="group" aria-label="Controles do modo de apresentação">
     <button type="button" id="previous-slide">← Anterior</button>
     <output id="slide-status" aria-live="polite">1 de 12</output>
     <button type="button" id="next-slide">Próximo →</button>
@@ -655,3 +667,5 @@
   </footer>
 </body>
 </html>
+
+

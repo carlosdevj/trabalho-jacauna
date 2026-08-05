@@ -1,7 +1,10 @@
-{
-  "files_created": 14,
-  "html_images": 11,
-  "topic_sections": 8,
-  "references": 11,
-  "validation_errors": []
+﻿{
+    "files_created":  14,
+    "html_images":  11,
+    "topic_sections":  8,
+    "references":  11,
+    "limitation_cases":  0,
+    "validation_errors":  [
+
+                          ]
 }

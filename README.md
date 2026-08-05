@@ -1,52 +1,50 @@
-# Tipos de Interfaces de Usuário
+# Tipos de Interfaces de Usuario
 
-Site estático acadêmico preparado para publicação no GitHub Pages.
+Site estatico academico preparado para publicacao no GitHub Pages.
 
 ## Antes da entrega
 
-Edite o arquivo `index.html` e substitua:
+Antes da entrega, substitua:
 
-1. `[Substituir pelo nome do professor]`;
-2. `[Integrante 2]`;
-3. `[Integrante 3]`;
-4. a imagem `assets/foto-trio.svg` pela foto real do trio;
-5. o texto `alt` da foto por uma descrição real dos integrantes.
+1. a imagem `assets/foto-trio.svg` pela foto real do trio;
+2. o texto `alt` da foto por uma descricao real dos integrantes.
 
-Uma opção simples é salvar a fotografia como `assets/foto-trio.webp` e alterar no HTML:
+Uma opcao simples e salvar a fotografia como `assets/foto-trio.webp` e alterar no HTML:
 
 ```html
 <img src="assets/foto-trio.webp"
-     alt="Fotografia dos três integrantes do trabalho, da esquerda para a direita: Nome 1, Nome 2 e Nome 3.">
+     alt="Fotografia dos tres integrantes do trabalho, da esquerda para a direita: Eric Freitas Sampaio, Carlos Gabriel de Morais Leal e Larissa dos Passos Costa Ferreira.">
 ```
 
-Comprima a imagem para evitar lentidão. Para uma foto horizontal, use aproximadamente 1600 × 900 pixels e, preferencialmente, formato WebP.
+Comprima a imagem para evitar lentidao. Para uma foto horizontal, use aproximadamente 1600 x 900 pixels e, preferencialmente, formato WebP.
 
 ## Estrutura
 
 ```text
 .
-├── index.html
-├── styles.css
-├── script.js
-├── README.md
-└── assets/
-    ├── ifrr-logo.svg
-    ├── foto-trio.svg
-    ├── gui.svg
-    ├── cli.svg
-    ├── menu.svg
-    ├── touch.svg
-    ├── vui.svg
-    ├── formulario.svg
-    ├── nlui.svg
-    └── requisitos.svg
+|-- index.html
+|-- styles.css
+|-- script.js
+|-- README.md
+|-- validation-report.json
+`-- assets/
+    |-- ifrr-logo.svg
+    |-- foto-trio.svg
+    |-- gui.svg
+    |-- cli.svg
+    |-- menu.svg
+    |-- touch.svg
+    |-- vui.svg
+    |-- formulario.svg
+    |-- nlui.svg
+    `-- requisitos.svg
 ```
 
-## Publicação no GitHub Pages
+## Publicacao no GitHub Pages
 
-1. Crie um repositório público no GitHub.
+1. Crie um repositorio publico no GitHub.
 2. Envie todos os arquivos mantendo a estrutura de pastas.
-3. Abra **Settings → Pages**.
+3. Abra **Settings -> Pages**.
 4. Em **Build and deployment**, selecione **Deploy from a branch**.
 5. Escolha a branch `main` e a pasta `/ (root)`.
 6. Salve e aguarde a URL no formato:
@@ -55,47 +53,47 @@ Comprima a imagem para evitar lentidão. Para uma foto horizontal, use aproximad
 https://seu-usuario.github.io/nome-do-repositorio/
 ```
 
-## Colaboração exigida
+## Colaboracao exigida
 
 Cada integrante deve:
 
-- criar uma branch própria;
-- fazer commits identificáveis;
+- criar uma branch propria;
+- fazer commits identificaveis;
 - abrir ao menos um pull request;
-- revisar ou aprovar mudanças de outro integrante.
+- revisar ou aprovar mudancas de outro integrante.
 
-Sugestão de divisão:
+Sugestao de divisao:
 
 - `feature/conteudo-gui-cli-menu`
 - `feature/conteudo-touch-vui-formulario`
 - `feature/conteudo-nlui-requisitos`
 - `feature/revisao-acessibilidade`
 
-## Apresentação
+## Apresentacao
 
-O botão **Apresentação** ativa o modo de tela cheia.
+O botao **Apresentacao** ativa o modo de tela cheia.
 
 Atalhos:
 
-- `←` e `Page Up`: seção anterior;
-- `→` e `Page Down`: próxima seção;
-- `Home`: primeira seção;
-- `End`: última seção;
-- `Esc`: sair da apresentação.
+- seta para esquerda e `Page Up`: secao anterior;
+- seta para direita e `Page Down`: proxima secao;
+- `Home`: primeira secao;
+- `End`: ultima secao;
+- `Esc`: sair da apresentacao.
 
 ## Acessibilidade aplicada
 
-- HTML5 semântico;
-- link para pular ao conteúdo;
-- fonte-base de 24 px;
+- HTML5 semantico;
+- link para pular ao conteudo;
 - contraste forte;
-- foco visível;
-- navegação por teclado;
+- foco visivel;
+- navegacao por teclado;
 - textos alternativos;
-- créditos nas figuras;
-- preferência por movimento reduzido;
+- creditos nas figuras;
+- preferencia por movimento reduzido;
 - modo de alto contraste;
-- layout responsivo.
+- layout responsivo;
+- barra de acessibilidade recolhivel.
 
 ## Testes recomendados
 
@@ -104,7 +102,7 @@ Antes da entrega, execute:
 - W3C HTML Validator;
 - WAVE;
 - Lighthouse, na categoria Accessibility;
-- navegação completa somente com `Tab`, `Shift + Tab` e `Enter`;
+- navegacao completa somente com `Tab`, `Shift + Tab` e `Enter`;
 - teste em celular e computador.
 
-> Validação automática não substitui teste manual nem avaliação com usuários.
+Validacao automatica nao substitui teste manual nem avaliacao com usuarios.
