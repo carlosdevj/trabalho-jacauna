@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Formulario longo com erro generico</title>
+  <desc id="desc">Representacao de formulario extenso com muitos campos e mensagem de erro sem indicar como corrigir.</desc>
+  <rect width="800" height="520" fill="#f8fafc"/>
+  <rect x="115" y="55" width="570" height="410" rx="14" fill="#ffffff" stroke="#334155" stroke-width="6"/>
+  <g fill="#e2e8f0">
+    <rect x="155" y="105" width="210" height="32" rx="5"/>
+    <rect x="155" y="160" width="490" height="32" rx="5"/>
+    <rect x="155" y="215" width="490" height="32" rx="5"/>
+    <rect x="155" y="270" width="490" height="32" rx="5"/>
+    <rect x="155" y="325" width="490" height="32" rx="5"/>
+  </g>
+  <rect x="155" y="385" width="360" height="45" rx="7" fill="#fee2e2" stroke="#b91c1c" stroke-width="4"/>
+  <text x="175" y="416" font-family="Arial, sans-serif" font-size="25" fill="#991b1b">Erro no preenchimento</text>
+  <text x="135" y="495" font-family="Arial, sans-serif" font-size="26" fill="#991b1b">Mas qual campo precisa ser corrigido?</text>
+</svg>

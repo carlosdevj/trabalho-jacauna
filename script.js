@@ -3,8 +3,43 @@
 
   const body = document.body;
   const root = document.documentElement;
+  const main = document.querySelector("main");
+  const sectionOrder = [
+    "capa",
+    "introducao",
+    "cli",
+    "menu",
+    "formulario",
+    "gui",
+    "touch",
+    "vui",
+    "nlui",
+    "requisitos",
+    "implementacao",
+    "referencias"
+  ];
+
+  sectionOrder
+    .map((id) => document.getElementById(id))
+    .filter(Boolean)
+    .forEach((section) => main?.appendChild(section));
+
+  document.querySelectorAll(".topic-grid").forEach((grid) => {
+    const limitation = grid.querySelector(".limitation-case");
+    const mainFigure = grid.querySelector(".topic-figure");
+    if (limitation && mainFigure) {
+      const visualStack = document.createElement("div");
+      visualStack.className = "topic-visuals";
+      mainFigure.replaceWith(visualStack);
+      visualStack.append(mainFigure, limitation);
+    }
+  });
+
   const menuButton = document.querySelector("#menu-button");
   const menu = document.querySelector("#menu-principal");
+  const accessibilityToolbar = document.querySelector(".accessibility-toolbar");
+  const accessibilityToggle = document.querySelector("#accessibility-toggle");
+  const accessibilityTools = document.querySelector("#accessibility-tools");
   const fontDecrease = document.querySelector("#font-decrease");
   const fontReset = document.querySelector("#font-reset");
   const fontIncrease = document.querySelector("#font-increase");
@@ -19,12 +54,13 @@
   const navLinks = [...document.querySelectorAll(".main-nav a")];
 
   let fontScale = Number(localStorage.getItem("fontScale")) || 1;
+  let toolbarCollapsed = localStorage.getItem("toolbarCollapsed") === "true";
   let currentSlide = 0;
 
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
   function applyFontScale() {
-    fontScale = clamp(fontScale, 1, 1.35);
+    fontScale = clamp(fontScale, 0.9, 1.35);
     root.style.setProperty("--font-scale", fontScale.toFixed(2));
     localStorage.setItem("fontScale", String(fontScale));
   }
@@ -32,6 +68,14 @@
   function setMenu(open) {
     menu.classList.toggle("open", open);
     menuButton.setAttribute("aria-expanded", String(open));
+  }
+
+  function setToolbarCollapsed(collapsed) {
+    toolbarCollapsed = collapsed;
+    accessibilityToolbar?.classList.toggle("collapsed", collapsed);
+    accessibilityToggle?.setAttribute("aria-expanded", String(!collapsed));
+    if (accessibilityTools) accessibilityTools.hidden = collapsed;
+    localStorage.setItem("toolbarCollapsed", String(collapsed));
   }
 
   function updateSlide() {
@@ -99,6 +143,10 @@
 
   menu?.addEventListener("click", (event) => {
     if (event.target.closest("a")) setMenu(false);
+  });
+
+  accessibilityToggle?.addEventListener("click", () => {
+    setToolbarCollapsed(!toolbarCollapsed);
   });
 
   fontDecrease?.addEventListener("click", () => {
@@ -198,6 +246,7 @@
   slides.forEach((slide) => observer.observe(slide));
 
   applyFontScale();
+  setToolbarCollapsed(toolbarCollapsed);
 
   const savedContrast = localStorage.getItem("highContrast") === "true";
   body.classList.toggle("high-contrast", savedContrast);

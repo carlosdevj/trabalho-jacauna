@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Quiosque touchscreen inacessivel</title>
+  <desc id="desc">Representacao de um totem touchscreen sem alternativa para usuario que nao enxerga a tela.</desc>
+  <rect width="800" height="520" fill="#f8fafc"/>
+  <rect x="250" y="60" width="300" height="410" rx="24" fill="#334155"/>
+  <rect x="285" y="95" width="230" height="260" rx="10" fill="#ffffff"/>
+  <g fill="#bae6fd">
+    <rect x="310" y="125" width="180" height="45" rx="7"/>
+    <rect x="310" y="190" width="180" height="45" rx="7"/>
+    <rect x="310" y="255" width="180" height="45" rx="7"/>
+  </g>
+  <circle cx="400" cy="410" r="28" fill="#64748b"/>
+  <path d="M575 115l80 80M655 115l-80 80" stroke="#b91c1c" stroke-width="16" stroke-linecap="round"/>
+  <text x="95" y="455" font-family="Arial, sans-serif" font-size="28" fill="#991b1b">Sem audio, braille ou alternativa fisica</text>
+</svg>
