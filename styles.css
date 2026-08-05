@@ -36,7 +36,7 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   font-family: Arial, Helvetica, system-ui, sans-serif;
-  font-size: calc(1.5rem * var(--font-scale));
+  font-size: calc(1.125rem * var(--font-scale));
   line-height: 1.55;
   text-rendering: optimizeLegibility;
 }
@@ -63,7 +63,7 @@ a {
 }
 
 button {
-  min-height: 3rem;
+  min-height: 2.75rem;
   border: 0.15rem solid var(--color-primary-strong);
   border-radius: 0.65rem;
   padding: 0.55rem 0.85rem;
@@ -103,12 +103,12 @@ h3 {
 
 h1 {
   margin: 0.5rem 0;
-  font-size: clamp(2.5rem, 7vw, 5.4rem);
+  font-size: clamp(2.35rem, 6vw, 4.7rem);
 }
 
 h2 {
   margin: 0 0 1.5rem;
-  font-size: clamp(2.1rem, 5vw, 4rem);
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
 }
 
 h3 {
@@ -207,7 +207,7 @@ li + li {
 }
 
 .brand small {
-  font-size: 0.68em;
+  font-size: 0.82em;
 }
 
 .menu-button {
@@ -227,7 +227,7 @@ li + li {
   border-radius: 0.4rem;
   padding: 0.55rem 0.68rem;
   color: #ffffff;
-  font-size: 0.68em;
+  font-size: 0.9em;
   font-weight: 700;
   text-decoration: none;
 }
@@ -243,26 +243,47 @@ li + li {
   z-index: 900;
   top: 7rem;
   right: 0.7rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.35rem;
-  max-width: min(95vw, 35rem);
+  width: min(22rem, calc(100vw - 1.4rem));
   padding: 0.45rem;
   background: rgb(255 255 255 / 0.96);
   border: 0.12rem solid var(--color-border);
   border-radius: 0.8rem;
   box-shadow: var(--shadow);
+  font-size: 1rem;
+}
+
+.accessibility-tools {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+
+.accessibility-tools[hidden] {
+  display: none;
+}
+
+.accessibility-toggle {
+  width: 100%;
+  min-height: 2.5rem;
+}
+
+.accessibility-toolbar.collapsed {
+  width: min(12rem, calc(100vw - 1.4rem));
 }
 
 .accessibility-toolbar button {
-  min-height: 2.7rem;
+  min-height: 2.5rem;
   padding: 0.45rem 0.65rem;
-  font-size: 0.62em;
+  font-size: 0.95rem;
+}
+
+.accessibility-tools button:nth-last-child(-n + 2) {
+  grid-column: span 3;
 }
 
 .slide-section {
-  min-height: 90vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   border-bottom: 0.12rem solid #d1d5db;
@@ -271,11 +292,11 @@ li + li {
 .section-shell {
   width: min(100% - 2rem, var(--max-width));
   margin-inline: auto;
-  padding: 5.5rem 0;
+  padding: 4.5rem 0;
 }
 
 .cover {
-  min-height: calc(100vh - 6.2rem);
+  min-height: calc(92vh - 6.2rem);
   color: #ffffff;
   background:
     linear-gradient(135deg, rgb(2 44 34 / 0.98), rgb(6 78 59 / 0.94)),
@@ -286,7 +307,7 @@ li + li {
 .cover-content {
   width: min(100% - 2rem, 72rem);
   margin-inline: auto;
-  padding: 4rem 0;
+  padding: 3.5rem 0;
 }
 
 .institution {
@@ -448,12 +469,19 @@ li + li {
 
 .topic-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(22rem, 0.85fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.8fr);
   gap: 2rem;
   align-items: start;
 }
 
+.topic-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .lead {
+  grid-column: 1 / -1;
   max-width: 62ch;
   padding-left: 1rem;
   border-left: 0.4rem solid var(--color-accent);
@@ -462,9 +490,38 @@ li + li {
 }
 
 .topic-content article {
-  margin-top: 1.4rem;
-  padding-top: 1.2rem;
-  border-top: 0.08rem solid #9ca3af;
+  min-height: 100%;
+  margin-top: 0;
+  padding: 1rem;
+  background: var(--color-bg);
+  border: 0.08rem solid #9ca3af;
+  border-radius: 0.55rem;
+}
+
+.limitation-case {
+  grid-column: 1 / -1;
+  padding: 0.9rem;
+  background: #fff7ed;
+  border-color: #c2410c;
+}
+
+.limitation-figure {
+  margin: 0.8rem 0 0;
+  padding: 0.8rem;
+  background: var(--color-surface);
+  border: 0.08rem solid #9ca3af;
+  border-radius: 0.55rem;
+}
+
+.limitation-figure img {
+  width: 100%;
+  border-radius: 0.4rem;
+}
+
+.limitation-figure figcaption {
+  margin-top: 0.55rem;
+  color: var(--color-muted);
+  font-size: 0.78em;
 }
 
 .citation {
@@ -473,14 +530,19 @@ li + li {
 }
 
 .topic-figure {
-  position: sticky;
-  top: 12rem;
   margin: 0;
   padding: 1rem;
   background: var(--color-bg);
   border: 0.12rem solid var(--color-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+.topic-visuals {
+  position: sticky;
+  top: 12rem;
+  display: grid;
+  gap: 1rem;
 }
 
 .topic-figure img {
@@ -541,6 +603,10 @@ li + li {
   border-radius: 0.8rem;
 }
 
+.presentation-controls[hidden] {
+  display: none;
+}
+
 .presentation-controls output {
   min-width: 7rem;
   text-align: center;
@@ -576,6 +642,33 @@ body.presentation-mode .section-shell,
 body.presentation-mode .cover-content {
   padding-top: 3.5rem;
   padding-bottom: 7rem;
+}
+
+body.presentation-mode .topic-grid {
+  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
+  gap: 1.4rem;
+}
+
+body.presentation-mode .topic-content {
+  grid-template-columns: 1fr;
+}
+
+body.presentation-mode .topic-content article {
+  padding: 0.75rem;
+}
+
+body.presentation-mode .topic-figure,
+body.presentation-mode .limitation-case {
+  padding: 0.7rem;
+}
+
+body.presentation-mode .limitation-case p {
+  font-size: 0.9em;
+}
+
+body.presentation-mode .limitation-figure img {
+  max-height: 13rem;
+  object-fit: contain;
 }
 
 body.high-contrast {
@@ -644,7 +737,17 @@ body.high-contrast .notice {
     grid-template-columns: 1fr;
   }
 
+  .topic-content {
+    grid-template-columns: 1fr;
+  }
+
   .topic-figure {
+    position: static;
+    max-width: 48rem;
+    margin-inline: auto;
+  }
+
+  .topic-visuals {
     position: static;
     max-width: 48rem;
     margin-inline: auto;
