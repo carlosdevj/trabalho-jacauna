@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Interface de voz</title>
+  <desc id="desc">Microfone, ondas sonoras e comando falado.</desc>
+  <rect width="800" height="600" rx="32" fill="#f8fafc"/>
+  
+  <circle cx="400" cy="300" r="125" fill="#064e3b"/>
+  <rect x="355" y="165" width="90" height="195" rx="45" fill="#ffffff"/>
+  <path d="M315 300c0 52 38 95 85 95s85-43 85-95" fill="none" stroke="#facc15" stroke-width="18" stroke-linecap="round"/>
+  <path d="M400 395v70M340 465h120" stroke="#ffffff" stroke-width="18" stroke-linecap="round"/>
+  <path d="M225 230c-35 45-35 95 0 140M175 190c-65 75-65 165 0 240" fill="none" stroke="#064e3b" stroke-width="15" stroke-linecap="round"/>
+  <path d="M575 230c35 45 35 95 0 140M625 190c65 75 65 165 0 240" fill="none" stroke="#064e3b" stroke-width="15" stroke-linecap="round"/>
+  <rect x="250" y="50" width="300" height="70" rx="25" fill="#facc15"/>
+  <text x="400" y="95" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#111827">“ABRIR MINHA AGENDA”</text>
+
+</svg>

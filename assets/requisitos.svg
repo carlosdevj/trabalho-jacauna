@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Requisitos de estrutura e interface</title>
+  <desc id="desc">Wireframe de página com selos de acessibilidade, desempenho e responsividade.</desc>
+  <rect width="800" height="600" rx="32" fill="#f8fafc"/>
+  
+  <rect x="90" y="65" width="620" height="470" rx="25" fill="#ffffff" stroke="#064e3b" stroke-width="9"/>
+  <rect x="115" y="95" width="570" height="60" rx="10" fill="#064e3b"/>
+  <rect x="115" y="175" width="160" height="270" rx="12" fill="#d1fae5"/>
+  <rect x="295" y="175" width="390" height="105" rx="12" fill="#e5e7eb"/>
+  <rect x="295" y="300" width="390" height="145" rx="12" fill="#fef3c7"/>
+  <rect x="115" y="465" width="570" height="45" rx="10" fill="#111827"/>
+  <g font-family="Arial" font-size="24" font-weight="700">
+    <text x="145" y="135" fill="#ffffff">CABEÇALHO E NAVEGAÇÃO</text>
+    <text x="140" y="225" fill="#111827">MENU</text>
+    <text x="330" y="225" fill="#111827">CONTEÚDO</text>
+    <text x="330" y="350" fill="#111827">AÇÃO E FEEDBACK</text>
+  </g>
+  <circle cx="170" cy="480" r="54" fill="#facc15" stroke="#064e3b" stroke-width="7"/>
+  <text x="170" y="489" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#111827">WCAG</text>
+  <circle cx="400" cy="480" r="54" fill="#d1fae5" stroke="#064e3b" stroke-width="7"/>
+  <text x="400" y="489" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#111827">RÁPIDO</text>
+  <circle cx="630" cy="480" r="54" fill="#ffffff" stroke="#064e3b" stroke-width="7"/>
+  <text x="630" y="489" text-anchor="middle" font-family="Arial" font-size="17" font-weight="700" fill="#111827">RESPONSIVO</text>
+
+</svg>

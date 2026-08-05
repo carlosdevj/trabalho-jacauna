@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Interface de linguagem natural</title>
+  <desc id="desc">Conversa com pergunta livre, identificação de intenção e resposta.</desc>
+  <rect width="800" height="600" rx="32" fill="#f8fafc"/>
+  
+  <rect x="70" y="85" width="420" height="120" rx="28" fill="#ffffff" stroke="#064e3b" stroke-width="8"/>
+  <text x="105" y="135" font-family="Arial" font-size="26" font-weight="700" fill="#111827">Usuário</text>
+  <text x="105" y="175" font-family="Arial" font-size="24" fill="#111827">“Mostre minhas tarefas de hoje.”</text>
+  <path d="M420 205l40 35-12-52" fill="#ffffff" stroke="#064e3b" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="310" y="300" width="420" height="175" rx="28" fill="#064e3b"/>
+  <text x="345" y="352" font-family="Arial" font-size="26" font-weight="700" fill="#facc15">Sistema</text>
+  <text x="345" y="395" font-family="Arial" font-size="24" fill="#ffffff">Encontrei 3 tarefas:</text>
+  <text x="345" y="433" font-family="Arial" font-size="22" fill="#ffffff">• Revisar projeto</text>
+  <text x="345" y="465" font-family="Arial" font-size="22" fill="#ffffff">• Enviar atividade</text>
+  <path d="M350 300l-42-38 15 55" fill="#064e3b"/>
+  <circle cx="210" cy="365" r="72" fill="#facc15"/>
+  <text x="210" y="375" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#111827">INTENÇÃO</text>
+
+</svg>

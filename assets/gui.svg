@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Interface gráfica</title>
+  <desc id="desc">Janela com barra superior, menu lateral, cartões e ponteiro.</desc>
+  <rect width="800" height="600" rx="32" fill="#f8fafc"/>
+  
+  <rect x="85" y="85" width="630" height="430" rx="22" fill="#ffffff" stroke="#064e3b" stroke-width="10"/>
+  <rect x="85" y="85" width="630" height="70" rx="18" fill="#064e3b"/>
+  <circle cx="130" cy="120" r="12" fill="#facc15"/>
+  <circle cx="165" cy="120" r="12" fill="#ffffff"/>
+  <circle cx="200" cy="120" r="12" fill="#d1fae5"/>
+  <rect x="110" y="185" width="160" height="290" rx="15" fill="#d1fae5"/>
+  <rect x="300" y="185" width="180" height="110" rx="15" fill="#e5e7eb"/>
+  <rect x="505" y="185" width="180" height="110" rx="15" fill="#e5e7eb"/>
+  <rect x="300" y="320" width="385" height="155" rx="15" fill="#fef3c7"/>
+  <rect x="135" y="215" width="110" height="22" rx="8" fill="#064e3b"/>
+  <rect x="135" y="260" width="85" height="18" rx="8" fill="#166534"/>
+  <rect x="135" y="300" width="105" height="18" rx="8" fill="#166534"/>
+  <path d="M605 375l-80-35 25 82 18-25 30 36 23-20-31-35z" fill="#111827"/>
+
+</svg>

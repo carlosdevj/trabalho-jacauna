@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Foto provisória do trio</title>
+  <desc id="desc">Três silhuetas e aviso para substituir pela fotografia real do trio.</desc>
+  <rect width="800" height="600" rx="32" fill="#f8fafc"/>
+  
+  <rect x="55" y="55" width="690" height="420" rx="28" fill="#064e3b"/>
+  <circle cx="250" cy="205" r="62" fill="#facc15"/>
+  <circle cx="400" cy="180" r="70" fill="#facc15"/>
+  <circle cx="550" cy="205" r="62" fill="#facc15"/>
+  <path d="M145 430c0-90 45-145 105-145s105 55 105 145" fill="#d1fae5"/>
+  <path d="M280 430c0-105 52-165 120-165s120 60 120 165" fill="#ffffff"/>
+  <path d="M445 430c0-90 45-145 105-145s105 55 105 145" fill="#d1fae5"/>
+  <rect x="190" y="490" width="420" height="58" rx="16" fill="#facc15"/>
+  <text x="400" y="528" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#111827">SUBSTITUIR PELA FOTO DO TRIO</text>
+
+</svg>

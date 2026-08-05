@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pesquisa acadêmica sobre oito tipos e requisitos de interfaces de usuário, com acessibilidade WCAG 2.1 e qualidade ISO/IEC 25010.">
+  <meta name="theme-color" content="#064e3b">
+  <title>Tipos de Interfaces de Usuário | IFRR</title>
+  <link rel="icon" href="assets/ifrr-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <noscript>
+    <div class="noscript" role="status">
+      O JavaScript está desativado. Todo o conteúdo continua disponível, mas o modo de apresentação e os controles de fonte não funcionarão.
+    </div>
+  </noscript>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#capa" aria-label="Voltar à capa do trabalho">
+        <img src="assets/ifrr-logo.svg"
+             alt="Logotipo do Instituto Federal de Roraima, formado por blocos verdes, círculo vermelho e a sigla IFRR."
+             width="90" height="112">
+        <span>
+          <strong>IFRR</strong>
+          <small>Campus Boa Vista</small>
+        </span>
+      </a>
+
+      <button class="menu-button" id="menu-button" type="button"
+              aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span>
+        <span>Menu</span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+        <a href="#gui">GUI</a>
+        <a href="#cli">CLI</a>
+        <a href="#menu">Menu</a>
+        <a href="#touch">Touch</a>
+        <a href="#vui">VUI</a>
+        <a href="#formulario">Formulário</a>
+        <a href="#nlui">NLUI</a>
+        <a href="#requisitos">Requisitos</a>
+        <a href="#referencias">Referências</a>
+      </nav>
+    </div>
+  </header>
+
+  <aside class="accessibility-toolbar" aria-label="Ferramentas de acessibilidade">
+    <button type="button" id="font-decrease" aria-label="Diminuir tamanho do texto">A−</button>
+    <button type="button" id="font-reset" aria-label="Restaurar tamanho padrão do texto">A</button>
+    <button type="button" id="font-increase" aria-label="Aumentar tamanho do texto">A+</button>
+    <button type="button" id="contrast-toggle" aria-pressed="false">
+      <span aria-hidden="true">◐</span>
+      <span>Alto contraste</span>
+    </button>
+    <button type="button" id="presentation-toggle" aria-pressed="false">
+      <span aria-hidden="true">▣</span>
+      <span>Apresentação</span>
+    </button>
+  </aside>
+
+  <main id="conteudo">
+    <section class="cover slide-section" id="capa" aria-labelledby="titulo-principal">
+      <div class="cover-content">
+        <div class="institution">
+          <img src="assets/ifrr-logo.svg"
+               alt="Logotipo do Instituto Federal de Educação, Ciência e Tecnologia de Roraima."
+               width="150" height="186">
+          <p>Instituto Federal de Educação, Ciência e Tecnologia de Roraima</p>
+        </div>
+
+        <p class="eyebrow">Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</p>
+        <h1 id="titulo-principal">Tipos de Interfaces de Usuário</h1>
+        <p class="subtitle">Pesquisa, desenvolvimento web, acessibilidade e qualidade de software</p>
+
+        <dl class="cover-data">
+          <div>
+            <dt>Disciplina</dt>
+            <dd>Interação Humano-Computador</dd>
+          </div>
+          <div>
+            <dt>Professor(a)</dt>
+            <dd>[Substituir pelo nome do professor]</dd>
+          </div>
+          <div>
+            <dt>Turma</dt>
+            <dd>Análise e Desenvolvimento de Sistemas</dd>
+          </div>
+        </dl>
+
+        <figure class="team-photo">
+          <!-- Substitua o arquivo abaixo pela foto real do trio e mantenha um texto alt descritivo. -->
+          <img src="assets/foto-trio.svg"
+               alt="Imagem provisória com três silhuetas representando os integrantes do trio. Substituir pela fotografia real antes da entrega."
+               width="960" height="540">
+          <figcaption>
+            Integrantes: Eric Freitas Sampaio · [Integrante 2] · [Integrante 3].
+            <strong>Substituir esta ilustração pela foto real do trio antes da entrega.</strong>
+          </figcaption>
+        </figure>
+
+        <p class="location">Boa Vista — Roraima · 2026</p>
+      </div>
+    </section>
+
+    <section class="intro slide-section" id="introducao" aria-labelledby="titulo-introducao">
+      <div class="section-shell">
+        <p class="section-number">Apresentação</p>
+        <h2 id="titulo-introducao">Como as pessoas se comunicam com sistemas digitais?</h2>
+
+        <div class="two-columns">
+          <article>
+            <h3>Objetivo</h3>
+            <p>Apresentar oito formas e dimensões de interação entre pessoas e sistemas computacionais.</p>
+            <p>O foco está em funcionamento, aplicações, vantagens, limitações e acessibilidade.</p>
+          </article>
+
+          <article>
+            <h3>Metodologia</h3>
+            <p>Foram consultados artigos científicos publicados entre 2022 e 2025, dentro do recorte dos últimos cinco anos.</p>
+            <p>Também foram usados documentos normativos do W3C e da ISO para orientar acessibilidade e qualidade.</p>
+          </article>
+        </div>
+
+        <div class="notice" role="note">
+          <strong>Nota sobre o enunciado:</strong>
+          embora ele mencione sete tópicos, a lista apresenta oito. Por isso, todos os itens de 3 a 10 foram incluídos.
+        </div>
+      </div>
+    </section>
+
+    <section class="topic slide-section" id="gui" aria-labelledby="titulo-gui">
+      <div class="section-shell">
+        <header class="topic-header">
+          <p class="section-number">03</p>
+          <div>
+            <p class="topic-tag">Interface visual</p>
+            <h2 id="titulo-gui">Interface Gráfica do Usuário — GUI</h2>
+          </div>
+        </header>
+
+        <div class="topic-grid">
+          <div class="topic-content">
+            <p class="lead">A GUI permite controlar um sistema por elementos visuais, como janelas, ícones, botões, menus e ponteiros.</p>
+
+            <article>
+              <h3>Como funciona</h3>
+              <p>O usuário reconhece objetos e ações na tela, selecionando comandos por mouse, teclado ou toque.</p>
+              <p>O feedback visual mostra estados, resultados, erros e possibilidades de ação.</p>
+            </article>
+
+            <article>
+              <h3>Vantagens e limitações</h3>
+              <p><strong>Vantagens:</strong> aprendizagem mais rápida, exploração visual e representação direta de tarefas.</p>
+              <p><strong>Limitações:</strong> excesso de elementos aumenta a carga cognitiva e interfaces mal rotuladas prejudicam leitores de tela.</p>
+            </article>
+
+            <article>
+              <h3>Evidências recentes</h3>
+              <p>O redesenho comunitário do GRASS GIS demonstrou que participação dos usuários, testes e terminologia clara podem melhorar adoção e eficiência.</p>
+              <p class="citation">Fonte científica: Karlovska et al. (2023) <a href="#ref-1" aria-label="Ir para a referência 1">[1]</a>.</p>
+            </article>
+
+            <article>
+              <h3>Exemplos</h3>
+              <p>Sistemas Windows, Android, caixas eletrônicos, editores de imagem, navegadores e painéis administrativos.</p>
+            </article>
+          </div>
+
+          <figure class="topic-figure">
+            <img src="assets/gui.svg"
+                 alt="Ilustração de uma interface gráfica com janela, barra lateral, botões, cartões e um ponteiro selecionando um controle."
+                 width="800" height="600" loading="lazy">
+            <figcaption>Representação de GUI. Fonte: elaboração própria, 2026.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic slide-section" id="cli" aria-labelledby="titulo-cli">
+      <div class="section-shell">
+        <header class="topic-header">
+          <p class="section-number">04</p>
+          <div>
+            <p class="topic-tag">Interface textual</p>
+            <h2 id="titulo-cli">Interface de Linha de Comando — CLI</h2>
+          </div>
+        </header>
+
+        <div class="topic-grid">
+          <div class="topic-content">
+            <p class="lead">A CLI recebe instruções digitadas em uma linguagem de comandos e apresenta resultados principalmente em texto.</p>
+
+            <article>
+              <h3>Como funciona</h3>
+              <p>O usuário informa um comando, opções e argumentos; o interpretador executa a operação e retorna uma saída.</p>
+              <p>Histórico, autocompletar, documentação e mensagens de erro auxiliam a interação.</p>
+            </article>
+
+            <article>
+              <h3>Vantagens e limitações</h3>
+              <p><strong>Vantagens:</strong> velocidade para especialistas, automação por scripts, precisão e baixo consumo de recursos.</p>
+              <p><strong>Limitações:</strong> exige memorização, possui curva de aprendizagem e erros de sintaxe podem bloquear tarefas.</p>
+            </article>
+
+            <article>
+              <h3>Evidências recentes</h3>
+              <p>Um estudo de ferramentas de análise estática encontrou problemas recorrentes de mensagens, documentação e orientação ao usuário em interfaces usadas por desenvolvedores.</p>
+              <p class="citation">Fonte científica: Nachtigall, Schlichtig e Bodden (2022) <a href="#ref-2" aria-label="Ir para a referência 2">[2]</a>.</p>
+            </article>
+
+            <article>
+              <h3>Exemplos</h3>
+              <p>Bash, PowerShell, Git, PNPM, Docker CLI, ferramentas de servidores e ambientes de desenvolvimento.</p>
+            </article>
+          </div>
+
+          <figure class="topic-figure">
+            <img src="assets/cli.svg"
+                 alt="Ilustração de um terminal escuro exibindo comandos, caminhos de diretório, uma operação concluída e um cursor de texto."
+                 width="800" height="600" loading="lazy">
+            <figcaption>Representação de CLI. Fonte: elaboração própria, 2026.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic slide-section" id="menu" aria-labelledby="titulo-menu">
+      <div class="section-shell">
+        <header class="topic-header">
+          <p class="section-number">05</p>
+          <div>
+            <p class="topic-tag">Escolha estruturada</p>
+            <h2 id="titulo-menu">Interface de Usuário Orientada por Menu</h2>
+          </div>
+        </header>
+
+        <div class="topic-grid">
+          <div class="topic-content">
+            <p class="lead">A interface orientada por menu apresenta opções organizadas para que o usuário escolha um caminho ou comando.</p>
+
+            <article>
+              <h3>Como funciona</h3>
+              <p>As ações são agrupadas em listas, categorias ou níveis hierárquicos, reduzindo a necessidade de memorizar comandos.</p>
+              <p>A navegação pode ocorrer por teclado, toque, controle remoto, voz ou leitor de tela.</p>
+            </article>
+
+            <article>
+              <h3>Vantagens e limitações</h3>
+              <p><strong>Vantagens:</strong> previsibilidade, aprendizagem simples e prevenção de entradas inválidas.</p>
+              <p><strong>Limitações:</strong> menus profundos atrasam tarefas e rótulos ambíguos dificultam encontrar a opção correta.</p>
+            </article>
+
+            <article>
+              <h3>Evidências recentes</h3>
+              <p>Pesquisas com usuários cegos mostram que posição, memória, gesto e feedback do leitor de tela influenciam o desempenho na seleção de menus por toque.</p>
+              <p class="citation">Fonte científica: Li et al. (2023) <a href="#ref-3" aria-label="Ir para a referência 3">[3]</a>.</p>
+            </article>
+
+            <article>
+              <h3>Exemplos</h3>
+              <p>Caixas eletrônicos, centrais telefônicas, smart TVs, terminais de atendimento e menus de configuração.</p>
+            </article>
+          </div>
+
+          <figure class="topic-figure">
+            <img src="assets/menu.svg"
+                 alt="Ilustração de um menu hierárquico com quatro opções, uma opção destacada, seta de continuidade e submenu lateral."
+                 width="800" height="600" loading="lazy">
+            <figcaption>Representação de interface por menu. Fonte: elaboração própria, 2026.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic slide-section" id="touch" aria-labelledby="titulo-touch">
+      <div class="section-shell">
+        <header class="topic-header">
+          <p class="section-number">06</p>
+          <div>
+            <p class="topic-tag">Interação direta</p>
+            <h2 id="titulo-touch">Interface de Toque do Usuário — Touch UI</h2>
+          </div>
+        </header>
+
+        <div class="topic-grid">
+          <div class="topic-content">
+            <p class="lead">A Touch UI permite agir diretamente sobre elementos exibidos em uma tela sensível ao toque.</p>
+
+            <article>
+              <h3>Como funciona</h3>
+              <p>Toques, deslizamentos, pinças e pressões são interpretados como comandos sobre objetos visuais.</p>
+              <p>Alvos amplos, espaçamento adequado e resposta imediata reduzem erros de seleção.</p>
+            </article>
+
+            <article>
+              <h3>Vantagens e limitações</h3>
+              <p><strong>Vantagens:</strong> interação direta, portabilidade, rapidez e suporte a gestos.</p>
+              <p><strong>Limitações:</strong> ausência de referência tátil, oclusão pelos dedos e barreiras para pessoas com limitações motoras ou visuais.</p>
+            </article>
+
+            <article>
+              <h3>Evidências recentes</h3>
+              <p>O protótipo Toucha11y mostrou que tecnologias auxiliares podem permitir que pessoas cegas operem quiosques originalmente inacessíveis.</p>
+              <p class="citation">Fonte científica: Li et al. (2023) <a href="#ref-4" aria-label="Ir para a referência 4">[4]</a>.</p>
+            </article>
+
+            <article>
+              <h3>Exemplos</h3>
+              <p>Smartphones, tablets, totens de autoatendimento, painéis automotivos e mesas interativas.</p>
+            </article>
+          </div>
+
+          <figure class="topic-figure">
+            <img src="assets/touch.svg"
+                 alt="Ilustração de uma mão tocando um botão grande em uma tela de smartphone, cercada por símbolos de gesto e retorno tátil."
+                 width="800" height="600" loading="lazy">
+            <figcaption>Representação de Touch UI. Fonte: elaboração própria, 2026.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic slide-section" id="vui" aria-labelledby="titulo-vui">
+      <div class="section-shell">
+        <header class="topic-header">
+          <p class="section-number">07</p>
+          <div>
+            <p class="topic-tag">Interação falada</p>
+            <h2 id="titulo-vui">Interface de Voz do Usuário — VUI</h2>
+          </div>
+        </header>
+
+        <div class="topic-grid">
+          <div class="topic-content">
+            <p class="lead">A VUI permite emitir comandos e receber respostas por fala, sem depender continuamente de tela ou teclado.</p>
+
+            <article>
+              <h3>Como funciona</h3>
+              <p>O sistema reconhece a fala, identifica a intenção, executa a ação e produz uma resposta sonora ou multimodal.</p>
+              <p>Confirmações e possibilidade de correção são essenciais em tarefas críticas.</p>
+            </article>
+
+            <article>
+              <h3>Vantagens e limitações</h3>
+              <p><strong>Vantagens:</strong> uso sem as mãos, rapidez, apoio à acessibilidade e interação em movimento.</p>
+              <p><strong>Limitações:</strong> ruído, sotaques, privacidade, baixa descobribilidade e falhas de reconhecimento.</p>
+            </article>
+
+            <article>
+              <h3>Evidências recentes</h3>
+              <p>Uma revisão sistemática organizou estudos de VUI em avaliação de usabilidade, personalização, ética, diferenças culturais e desafios tecnológicos.</p>
+              <p class="citation">Fonte científica: Deshmukh e Chalmeta (2024) <a href="#ref-5" aria-label="Ir para a referência 5">[5]</a>.</p>
+            </article>
+
+            <article>
+              <h3>Exemplos</h3>
+              <p>Assistentes virtuais, casas inteligentes, navegação veicular, atendimento telefônico e tecnologias assistivas.</p>
+            </article>
+          </div>
+
+          <figure class="topic-figure">
+            <img src="assets/vui.svg"
+                 alt="Ilustração de um microfone central, ondas sonoras, balão com comando falado e resposta confirmada pelo sistema."
+                 width="800" height="600" loading="lazy">
+            <figcaption>Representação de VUI. Fonte: elaboração própria, 2026.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic slide-section" id="formulario" aria-labelledby="titulo-formulario">
+      <div class="section-shell">
+        <header class="topic-header">
+          <p class="section-number">08</p>
+          <div>
+            <p class="topic-tag">Entrada estruturada</p>
+            <h2 id="titulo-formulario">Interface de Usuário Baseada em Formulário</h2>
+          </div>
+        </header>
+
+        <div class="topic-grid">
+          <div class="topic-content">
+            <p class="lead">A interface baseada em formulário coleta, valida e organiza informações em campos previamente definidos.</p>
+
+            <article>
+              <h3>Como funciona</h3>
+              <p>Rótulos orientam o preenchimento de textos, seleções, datas, caixas de marcação e outros controles.</p>
+              <p>Validação, instruções e mensagens de erro ajudam o usuário a corrigir os dados.</p>
+            </article>
+
+            <article>
+              <h3>Vantagens e limitações</h3>
+              <p><strong>Vantagens:</strong> dados padronizados, validação automática, rastreabilidade e integração com bancos de dados.</p>
+              <p><strong>Limitações:</strong> formulários extensos cansam, erros genéricos confundem e campos sem rótulo prejudicam tecnologias assistivas.</p>
+            </article>
+
+            <article>
+              <h3>Evidências recentes</h3>
+              <p>Um estudo participativo propôs um formulário universal para registrar barreiras de acessibilidade com informações úteis à solução do problema.</p>
+              <p class="citation">Fonte científica: Wegener et al. (2024) <a href="#ref-6" aria-label="Ir para a referência 6">[6]</a>.</p>
+            </article>
+
+            <article>
+              <h3>Exemplos</h3>
+              <p>Cadastros, inscrições, prontuários, compras, pesquisas, sistemas acadêmicos e solicitações governamentais.</p>
+            </article>
+          </div>
+
+          <figure class="topic-figure">
+            <img src="assets/formulario.svg"
+                 alt="Ilustração de um formulário acessível com rótulos acima dos campos, indicação de campo obrigatório, mensagem de ajuda e botão de envio."
+                 width="800" height="600" loading="lazy">
+            <figcaption>Representação de interface por formulário. Fonte: elaboração própria, 2026.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic slide-section" id="nlui" aria-labelledby="titulo-nlui">
+      <div class="section-shell">
+        <header class="topic-header">
+          <p class="section-number">09</p>
+          <div>
+            <p class="topic-tag">Linguagem humana</p>
+            <h2 id="titulo-nlui">Interface de Usuário de Linguagem Natural — NLUI</h2>
+          </div>
+        </header>
+
+        <div class="topic-grid">
+          <div class="topic-content">
+            <p class="lead">A NLUI interpreta frases humanas em texto ou voz para realizar tarefas e manter uma interação conversacional.</p>
+
+            <article>
+              <h3>Como funciona</h3>
+              <p>O sistema processa a mensagem, identifica intenção, contexto e entidades, produzindo uma resposta ou ação.</p>
+              <p>Diferente de uma CLI, a entrada pode variar sem seguir uma sintaxe rígida.</p>
+            </article>
+
+            <article>
+              <h3>Vantagens e limitações</h3>
+              <p><strong>Vantagens:</strong> baixa barreira inicial, flexibilidade e acesso a funções complexas por perguntas comuns.</p>
+              <p><strong>Limitações:</strong> ambiguidades, respostas incorretas, contexto perdido, vieses e expectativa exagerada sobre a capacidade do sistema.</p>
+            </article>
+
+            <article>
+              <h3>Evidências recentes</h3>
+              <p>Diretrizes centradas no usuário indicam que clareza, reparo de falhas, estilo de linguagem e transparência melhoram conversas com chatbots.</p>
+              <p class="citation">Fonte científica: Silva e Canedo (2023) <a href="#ref-7" aria-label="Ir para a referência 7">[7]</a>.</p>
+            </article>
+
+            <article>
+              <h3>Exemplos</h3>
+              <p>Chatbots, assistentes de IA, pesquisa conversacional, suporte ao cliente e consulta a sistemas por texto.</p>
+            </article>
+          </div>
+
+          <figure class="topic-figure">
+            <img src="assets/nlui.svg"
+                 alt="Ilustração de uma conversa entre pessoa e sistema, com uma pergunta em linguagem natural, interpretação de intenção e resposta contextual."
+                 width="800" height="600" loading="lazy">
+            <figcaption>Representação de NLUI. Fonte: elaboração própria, 2026.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic slide-section" id="requisitos" aria-labelledby="titulo-requisitos">
+      <div class="section-shell">
+        <header class="topic-header">
+          <p class="section-number">10</p>
+          <div>
+            <p class="topic-tag">Projeto e qualidade</p>
+            <h2 id="titulo-requisitos">Requisitos de Estrutura e Interface</h2>
+          </div>
+        </header>
+
+        <div class="topic-grid">
+          <div class="topic-content">
+            <p class="lead">Este item não é um tipo de entrada, mas um conjunto de critérios que orienta como uma interface deve ser estruturada e avaliada.</p>
+
+            <article>
+              <h3>Estrutura essencial</h3>
+              <p>Hierarquia de títulos, navegação previsível, agrupamento coerente, consistência visual e adaptação a diferentes telas.</p>
+              <p>Os componentes precisam comunicar nome, função, estado, resultado e alternativa em caso de erro.</p>
+            </article>
+
+            <article>
+              <h3>Acessibilidade e usabilidade</h3>
+              <p>O conteúdo deve ser perceptível, operável, compreensível e robusto, conforme os princípios da WCAG.</p>
+              <p>Testes automáticos ajudam, mas avaliação humana e participação de pessoas com deficiência continuam necessárias.</p>
+            </article>
+
+            <article>
+              <h3>Evidências recentes</h3>
+              <p>Uma revisão de 34 estudos concluiu que requisitos de acessibilidade aparecem principalmente nas fases de levantamento e testes, com participação dos usuários.</p>
+              <p class="citation">Fonte científica: Teixeira, Eusébio e Teixeira (2024) <a href="#ref-8" aria-label="Ir para a referência 8">[8]</a>.</p>
+            </article>
+
+            <article>
+              <h3>Qualidade ISO/IEC 25010</h3>
+              <p>O projeto prioriza adequação funcional, usabilidade, eficiência de desempenho, compatibilidade e manutenibilidade.</p>
+            </article>
+          </div>
+
+          <figure class="topic-figure">
+            <img src="assets/requisitos.svg"
+                 alt="Ilustração de uma estrutura de interface com hierarquia de cabeçalho, navegação, conteúdo, formulário, rodapé e selos de acessibilidade, desempenho e responsividade."
+                 width="800" height="600" loading="lazy">
+            <figcaption>Representação de requisitos de estrutura. Fonte: elaboração própria, 2026.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="implementation slide-section" id="implementacao" aria-labelledby="titulo-implementacao">
+      <div class="section-shell">
+        <p class="section-number">Aplicação prática</p>
+        <h2 id="titulo-implementacao">Como os requisitos foram aplicados neste site</h2>
+
+        <div class="requirements-grid">
+          <article>
+            <h3>WCAG 2.1</h3>
+            <ul>
+              <li>HTML5 semântico e link para pular ao conteúdo.</li>
+              <li>Textos alternativos e créditos em todas as figuras.</li>
+              <li>Navegação por teclado e foco visível.</li>
+              <li>Fonte-base de 24 px e contraste mínimo de 4,5:1.</li>
+              <li>Conteúdo compreensível sem depender somente de cores.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>ISO/IEC 25010</h3>
+            <ul>
+              <li>Conteúdo completo para adequação funcional.</li>
+              <li>Arquivos leves e imagens vetoriais para desempenho.</li>
+              <li>Layout responsivo para compatibilidade.</li>
+              <li>CSS e JavaScript separados para manutenibilidade.</li>
+              <li>Controles simples e previsíveis para usabilidade.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="references slide-section" id="referencias" aria-labelledby="titulo-referencias">
+      <div class="section-shell">
+        <p class="section-number">Fontes consultadas</p>
+        <h2 id="titulo-referencias">Referências científicas e normativas</h2>
+        <p>Referências organizadas em formato APA. Os links abrem em uma nova aba.</p>
+
+        <ol class="reference-list">
+          <li id="ref-1">
+            Karlovska, L., Petrasova, A., Petras, V., &amp; Landa, M. (2023).
+            <em>Redesigning graphical user interface of open-source geospatial software in a community-driven way: A case study of GRASS GIS</em>.
+            ISPRS International Journal of Geo-Information, 12(9), 376.
+            <a href="https://doi.org/10.3390/ijgi12090376" target="_blank" rel="noopener noreferrer">Acessar DOI<span class="sr-only"> da referência 1</span></a>.
+          </li>
+
+          <li id="ref-2">
+            Nachtigall, M., Schlichtig, M., &amp; Bodden, E. (2022).
+            <em>A large-scale study of usability criteria addressed by static analysis tools</em>.
+            Proceedings of the 31st ACM SIGSOFT International Symposium on Software Testing and Analysis, 532–543.
+            <a href="https://doi.org/10.1145/3533767" target="_blank" rel="noopener noreferrer">Acessar DOI<span class="sr-only"> da referência 2</span></a>.
+          </li>
+
+          <li id="ref-3">
+            Li, Z., Ko, Y.-J., Putkonen, A., Feiz, S., Ashok, V., Ramakrishnan, I. V., Oulasvirta, A., &amp; Bi, X. (2023).
+            <em>Modeling touch-based menu selection performance of blind users via reinforcement learning</em>.
+            Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems.
+            <a href="https://doi.org/10.1145/3544548.3580640" target="_blank" rel="noopener noreferrer">Acessar DOI<span class="sr-only"> da referência 3</span></a>.
+          </li>
+
+          <li id="ref-4">
+            Li, J., Yan, Z., Shah, A., Lazar, J., &amp; Peng, H. (2023).
+            <em>Toucha11y: Making inaccessible public touchscreens accessible</em>.
+            Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems, 1–13.
+            <a href="https://doi.org/10.1145/3544548.3581254" target="_blank" rel="noopener noreferrer">Acessar DOI<span class="sr-only"> da referência 4</span></a>.
+          </li>
+
+          <li id="ref-5">
+            Deshmukh, A. M., &amp; Chalmeta, R. (2024).
+            <em>User experience and usability of voice user interfaces: A systematic literature review</em>.
+            Information, 15(9), 579.
+            <a href="https://doi.org/10.3390/info15090579" target="_blank" rel="noopener noreferrer">Acessar DOI<span class="sr-only"> da referência 5</span></a>.
+          </li>
+
+          <li id="ref-6">
+            Wegener, A., Fausel, K., Haug, S., &amp; Maedche, A. (2024).
+            <em>A universal web accessibility feedback form: A participatory design study</em>.
+            Proceedings of the 21st International Web for All Conference, 106–117.
+            <a href="https://doi.org/10.1145/3677846.3677853" target="_blank" rel="noopener noreferrer">Acessar DOI<span class="sr-only"> da referência 6</span></a>.
+          </li>
+
+          <li id="ref-7">
+            Silva, G. R. S., &amp; Canedo, E. D. (2023).
+            <em>Towards user-centric guidelines for chatbot conversational design</em>.
+            International Journal of Human–Computer Interaction, 40(2), 98–120.
+            <a href="https://doi.org/10.1080/10447318.2022.2118244" target="_blank" rel="noopener noreferrer">Acessar DOI<span class="sr-only"> da referência 7</span></a>.
+          </li>
+
+          <li id="ref-8">
+            Teixeira, P., Eusébio, C., &amp; Teixeira, L. (2024).
+            <em>Understanding the integration of accessibility requirements in the development process of information systems: A systematic literature review</em>.
+            Requirements Engineering, 29(2), 143–176.
+            <a href="https://doi.org/10.1007/s00766-023-00409-8" target="_blank" rel="noopener noreferrer">Acessar DOI<span class="sr-only"> da referência 8</span></a>.
+          </li>
+
+          <li id="ref-9">
+            Ara, J., Sik-Lányi, C., &amp; Kelemen, A. (2024).
+            <em>Accessibility engineering in web evaluation process: A systematic literature review</em>.
+            Universal Access in the Information Society, 23, 653–686.
+            <a href="https://doi.org/10.1007/s10209-023-00967-2" target="_blank" rel="noopener noreferrer">Acessar DOI<span class="sr-only"> da referência 9</span></a>.
+          </li>
+
+          <li id="ref-10">
+            World Wide Web Consortium. (2025).
+            <em>Web Content Accessibility Guidelines (WCAG) 2.1</em>.
+            <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer">Acessar documento<span class="sr-only"> da referência 10</span></a>.
+          </li>
+
+          <li id="ref-11">
+            International Organization for Standardization. (2011).
+            <em>ISO/IEC 25010: Systems and software engineering — Systems and software quality requirements and evaluation</em>.
+            <a href="https://www.iso.org/standard/35733.html" target="_blank" rel="noopener noreferrer">Acessar página da norma<span class="sr-only"> da referência 11</span></a>.
+          </li>
+        </ol>
+
+        <div class="notice" role="note">
+          A norma ISO/IEC 25010 é anterior ao recorte de cinco anos, mas foi incluída por ser um requisito normativo obrigatório do enunciado, não uma fonte principal da pesquisa temática.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="presentation-controls" id="presentation-controls" hidden aria-label="Controles do modo de apresentação">
+    <button type="button" id="previous-slide">← Anterior</button>
+    <output id="slide-status" aria-live="polite">1 de 12</output>
+    <button type="button" id="next-slide">Próximo →</button>
+    <button type="button" id="exit-presentation">Sair</button>
+  </div>
+
+  <footer class="site-footer">
+    <p>Trabalho acadêmico desenvolvido para a disciplina de Interação Humano-Computador.</p>
+    <p>IFRR · Campus Boa Vista · 2026</p>
+    <a href="#capa">Voltar ao início</a>
+  </footer>
+</body>
+</html>
